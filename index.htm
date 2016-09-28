@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Convex Hull</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <script type= "text/javascript" src = "js/convexHull.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body onload = "readFile();">
+    <canvas id="gamescreen">You're browser does not support HTML5.</canvas>
+
+
+<div class="startLocation">
+  <button onclick="bruteForce();" class="btn btn-primary">Brute Force</button>
+  <button onclick="quickHull();" class="btn btn-primary">Quick Hull</button>
+  <button onclick="clearPoints();" class="btn btn-primary">Clear</button>
+  <br><br><label>Time for Brute Force:</label><div id = "timerBf"></div><br><br>
+  <br><br><label>Time for QuickHull:</label><div id = "timerQuick"></div><br><br>
+</div>
+
+  </body>
+<footer>
+  <label for = "inputFile">Please Choose A File To Use:</label>
+  <input id = "inputFile" type = "file" onchange="loadFile('#content_area');" class="btn btn-primary"></input>
+
+
+  <label> Points connected in Brute Force Algorithm: </label><div id="bruteForce"><b></b>
+  </div><br><br>
+  <label> Points connected in quickHull Algorithm: </label><div id="quickHull"><b></b>
+  </div><br><br>
+  <label>Number Of Points: </label><div id = "output"><b></b></div><br><br>
+  <div id = "split"><b></b></div><br><br>
+  <div id = "convexHull"><b></b></div>
+
+</footer>
+
+
+</html>
